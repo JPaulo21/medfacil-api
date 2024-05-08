@@ -1,8 +1,8 @@
 package com.api.medfacil.web.mapper;
 
-import com.api.medfacil.entities.Caregiver;
-import com.api.medfacil.entities.ContactCaregiver;
-import com.api.medfacil.services.CaregiverService;
+import com.api.medfacil.domain.entities.Caregiver;
+import com.api.medfacil.domain.entities.ContactCaregiver;
+import com.api.medfacil.domain.services.CaregiverService;
 import com.api.medfacil.web.dto.caregiver.ContactCaregiverDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

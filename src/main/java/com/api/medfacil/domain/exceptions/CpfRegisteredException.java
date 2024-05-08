@@ -1,4 +1,4 @@
-package com.api.medfacil.exceptions;
+package com.api.medfacil.domain.exceptions;
 
 public class CpfRegisteredException extends RuntimeException{
 

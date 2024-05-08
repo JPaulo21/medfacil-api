@@ -1,9 +1,13 @@
-package com.api.medfacil.services;
+package com.api.medfacil.domain.services;
 
 import com.api.medfacil.entities.Medicine;
 import com.api.medfacil.entities.User;
 import com.api.medfacil.repositories.MedicineRepository;
 import com.api.medfacil.repositories.UserRepository;
+import com.api.medfacil.domain.entities.Medicine;
+import com.api.medfacil.domain.entities.User;
+import com.api.medfacil.domain.entities.enums.TypeFrequency;
+import com.api.medfacil.domain.repositories.MedicineRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,4 +1,4 @@
-package com.api.medfacil.entities;
+package com.api.medfacil.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

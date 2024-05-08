@@ -1,7 +1,7 @@
-package com.api.medfacil.services;
+package com.api.medfacil.domain.services;
 
-import com.api.medfacil.entities.ContactCaregiver;
-import com.api.medfacil.repositories.ContactCaregiverRepository;
+import com.api.medfacil.domain.repositories.ContactCaregiverRepository;
+import com.api.medfacil.domain.entities.ContactCaregiver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

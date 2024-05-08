@@ -1,6 +1,6 @@
 package com.api.medfacil.config.security.JWT;
 
-import com.api.medfacil.repositories.UserRepository;
+import com.api.medfacil.domain.repositories.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

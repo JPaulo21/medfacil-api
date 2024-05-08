@@ -1,7 +1,6 @@
-package com.api.medfacil.services;
+package com.api.medfacil.domain.services;
 
-import com.api.medfacil.entities.User;
-import com.api.medfacil.repositories.UserRepository;
+import com.api.medfacil.domain.entities.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;

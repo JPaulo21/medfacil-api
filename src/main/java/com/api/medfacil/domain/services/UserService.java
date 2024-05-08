@@ -1,9 +1,9 @@
-package com.api.medfacil.services;
+package com.api.medfacil.domain.services;
 
-import com.api.medfacil.entities.User;
-import com.api.medfacil.exceptions.CpfRegisteredException;
-import com.api.medfacil.exceptions.FullNumberRegisteredException;
-import com.api.medfacil.repositories.UserRepository;
+import com.api.medfacil.domain.entities.User;
+import com.api.medfacil.domain.exceptions.CpfRegisteredException;
+import com.api.medfacil.domain.exceptions.FullNumberRegisteredException;
+import com.api.medfacil.domain.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.userdetails.UserDetails;

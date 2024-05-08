@@ -1,6 +1,6 @@
-package com.api.medfacil.repositories;
+package com.api.medfacil.domain.repositories;
 
-import com.api.medfacil.entities.Caregiver;
+import com.api.medfacil.domain.entities.Caregiver;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

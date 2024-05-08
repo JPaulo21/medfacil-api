@@ -1,7 +1,6 @@
-package com.api.medfacil.entities;
+package com.api.medfacil.domain.entities;
 
-import com.api.medfacil.entities.enums.Time;
-import com.api.medfacil.entities.enums.TypeFrequency;
+import com.api.medfacil.domain.entities.enums.TypeFrequency;
 import jakarta.persistence.*;
 import lombok.Data;
 

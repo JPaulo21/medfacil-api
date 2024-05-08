@@ -1,7 +1,7 @@
 package com.api.medfacil.web.controller;
 
-import com.api.medfacil.entities.User;
-import com.api.medfacil.services.UserService;
+import com.api.medfacil.domain.entities.User;
+import com.api.medfacil.domain.services.UserService;
 import com.api.medfacil.web.dto.user.UserDTO;
 import com.api.medfacil.web.mapper.UserMapper;
 import jakarta.validation.Valid;

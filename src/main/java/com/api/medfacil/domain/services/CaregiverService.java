@@ -1,16 +1,13 @@
-package com.api.medfacil.services;
+package com.api.medfacil.domain.services;
 
-import com.api.medfacil.entities.Caregiver;
-import com.api.medfacil.entities.User;
-import com.api.medfacil.repositories.CarigiverRepository;
+import com.api.medfacil.domain.entities.User;
+import com.api.medfacil.domain.repositories.CarigiverRepository;
+import com.api.medfacil.domain.entities.Caregiver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor

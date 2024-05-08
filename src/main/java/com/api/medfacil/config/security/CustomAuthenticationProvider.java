@@ -1,6 +1,6 @@
 package com.api.medfacil.config.security;
 
-import com.api.medfacil.services.UserService;
+import com.api.medfacil.domain.services.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;

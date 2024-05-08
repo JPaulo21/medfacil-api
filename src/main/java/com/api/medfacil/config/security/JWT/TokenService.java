@@ -7,7 +7,7 @@ import com.auth0.jwt.JWT;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
-import com.api.medfacil.entities.User;
+import com.api.medfacil.domain.entities.User;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import org.springframework.stereotype.Service;

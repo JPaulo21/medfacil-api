@@ -1,6 +1,6 @@
-package com.api.medfacil.repositories;
+package com.api.medfacil.domain.repositories;
 
-import com.api.medfacil.entities.MedicationTime;
+import com.api.medfacil.domain.entities.MedicationTime;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
