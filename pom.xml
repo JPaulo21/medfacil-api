@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.api</groupId>
 	<artifactId>medfacil</artifactId>
-	<version>1.1.2</version>
+	<version>1.2.4</version>
 	<name>medfacil</name>
 	<description>API da medfacil</description>
 	<properties>
