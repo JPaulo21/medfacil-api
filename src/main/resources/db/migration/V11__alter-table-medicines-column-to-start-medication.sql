@@ -1,0 +1,1 @@
+ALTER TABLE medicines RENAME COLUMN start_date to start_medication;
