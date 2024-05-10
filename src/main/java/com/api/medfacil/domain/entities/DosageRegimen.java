@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Data
 public class DosageRegimen {
 
-    @Column(name = "routes of administration", nullable = false)
+    @Column(name = "routes_of_administration", nullable = false)
     private String routesOfAdministration;
 
     @Column(nullable = false)
@@ -20,17 +20,13 @@ public class DosageRegimen {
     @Column(nullable = false)
     private TypeFrequency typeFrequency;
 
-    @Column(name = "start_date", nullable = false)
-    private LocalDateTime startDate;
+    @Column(name = "start_medication", nullable = false)
+    private LocalDateTime startMedication;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "medication_time", nullable = false)
-    private Time duration;
+    @Column(name = "end_medication", nullable = false)
+    private LocalDateTime endMedication;
 
     @Column(nullable = false)
     private String observation;
-
-    @Column(nullable = false)
-    private Boolean enabled;
 
 }

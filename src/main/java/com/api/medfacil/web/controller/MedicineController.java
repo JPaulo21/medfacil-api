@@ -38,7 +38,7 @@ public class MedicineController {
 
     @PostMapping
     public ResponseEntity create(@Valid @RequestBody MedicineDTO medicineDTO, UriComponentsBuilder ucb){
-        Medicine medicine = medicineService.save(medicineMapper.toMedicine(medicineDTO));
+        Medicine medicine = medicineService.save(medicineMapper.toEntity(medicineDTO));
         URI location = ucb
                 .path("/api/v1/medicines/{id}")
                 .buildAndExpand(medicine.getId())

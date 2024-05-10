@@ -14,10 +14,13 @@ import java.util.List;
 public interface MedicineMapper {
 
     @Mapping(target = "user", source = "userId")
-    Medicine toMedicine(MedicineDTO medicineDTO);
+    @Mapping(target = "dosageRegimen", source = "dosageRegimen")
+    @Mapping(target = "enabled", constant = "true")
+    @Mapping(target = "dosageRegimen.typeFrequency", source = "dosageRegimen.typeFrequency")
+    Medicine toEntity(MedicineDTO medicineDTO);
 
     @Mapping(target = "userId", source = "user.id")
-    MedicineDTO toMedicineDTO(Medicine medicine);
+    MedicineDTO toDTO(Medicine medicine);
 
     MedicineQueryDTO toMedicineQueryDTO(Medicine medicine);
 
