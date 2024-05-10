@@ -1,12 +1,12 @@
-package com.api.medfacil.entities;
+package com.api.medfacil.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 @Entity(name = "Alert")
@@ -14,6 +14,7 @@ import java.time.LocalTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@Builder
 public class Alert {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,11 +24,14 @@ public class Alert {
     @Column(nullable = false)
     private String message;
 
-    @Column(name = "date_alert")
+    @Column(name = "date_alert", nullable = false)
     private LocalDate dateAlert;
 
-    @Column(name = "hour_alert")
+    @Column(name = "hour_alert", nullable = false)
     private LocalTime hourAlert;
+
+    @Column(name = "confirmed",nullable = false)
+    private Boolean confirmed;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
