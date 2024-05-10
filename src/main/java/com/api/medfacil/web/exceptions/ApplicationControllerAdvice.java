@@ -1,7 +1,5 @@
 package com.api.medfacil.web.exceptions;
 
-import com.api.medfacil.exceptions.CpfRegisteredException;
-import com.api.medfacil.exceptions.FullNumberRegisteredException;
 import com.api.medfacil.domain.exceptions.CpfRegisteredException;
 import com.api.medfacil.domain.exceptions.FullNumberRegisteredException;
 import lombok.extern.slf4j.Slf4j;

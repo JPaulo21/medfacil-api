@@ -1,9 +1,5 @@
 package com.api.medfacil.web.controller;
 
-import com.api.medfacil.entities.Caregiver;
-import com.api.medfacil.entities.ContactCaregiver;
-import com.api.medfacil.services.CaregiverService;
-import com.api.medfacil.services.ContactCaregiverService;
 import com.api.medfacil.domain.entities.Caregiver;
 import com.api.medfacil.domain.entities.ContactCaregiver;
 import com.api.medfacil.domain.services.CaregiverService;

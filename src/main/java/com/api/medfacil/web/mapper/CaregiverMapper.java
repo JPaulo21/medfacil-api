@@ -1,8 +1,5 @@
 package com.api.medfacil.web.mapper;
 
-import com.api.medfacil.entities.Caregiver;
-import com.api.medfacil.entities.User;
-import com.api.medfacil.services.UserService;
 import com.api.medfacil.domain.entities.Caregiver;
 import com.api.medfacil.domain.entities.User;
 import com.api.medfacil.domain.services.UserService;
