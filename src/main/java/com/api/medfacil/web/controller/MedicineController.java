@@ -46,15 +46,7 @@ public class MedicineController implements MedicineDocs {
         return ResponseEntity.created(location).build();
     }
 
-    @Operation(summary = "Get medicines by user id", description = "will listed datas all medicines by user id", tags = {"Medicine"}
-            , security = @SecurityRequirement(name = "bearerAuth")
-    )
-    @ApiResponses(value =
-        @ApiResponse(
-            responseCode = "201", description = "Medicines",
-            content = @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = MedicineQueryDTO.class)))
-        )
-    )
+
     @GetMapping("/user/{id}")
     public ResponseEntity<Page<MedicineQueryDTO>> getMedicinesByUser(@PageableDefault(size = 10) Pageable page){
         Page<Medicine> medicinePage = medicineService.getMedicinesByUser(page);
