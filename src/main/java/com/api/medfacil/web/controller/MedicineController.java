@@ -27,17 +27,17 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/medicines")
+@RequestMapping("/v1/medicines")
 @RequiredArgsConstructor
-@Tag(name = "Medicine", description = "Endpoints for medicine operations")
+@Tag(name = "Medicines", description = "Endpoints for medicine operations")
 @SecurityRequirement(name = "bearerAuth")
-public class MedicineController {
+public class MedicineController implements MedicineDocs {
 
     private final MedicineService medicineService;
     private final MedicineMapper medicineMapper;
 
     @PostMapping
-    public ResponseEntity create(@Valid @RequestBody MedicineDTO medicineDTO, UriComponentsBuilder ucb){
+    public ResponseEntity<Void> create(@Valid @RequestBody MedicineDTO medicineDTO, UriComponentsBuilder ucb){
         Medicine medicine = medicineService.save(medicineMapper.toEntity(medicineDTO));
         URI location = ucb
                 .path("/api/v1/medicines/{id}")

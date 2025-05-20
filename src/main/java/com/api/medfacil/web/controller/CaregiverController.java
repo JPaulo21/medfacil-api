@@ -22,7 +22,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/caregivers")
+@RequestMapping("/v1/caregivers")
 @RequiredArgsConstructor
 public class CaregiverController {
 

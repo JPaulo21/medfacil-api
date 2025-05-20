@@ -15,7 +15,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 
 @RestController
-@RequestMapping("/api/v1/users")
+@RequestMapping("/v1/users")
 @RequiredArgsConstructor
 public class UserController implements UserDocs {
 
@@ -26,7 +26,7 @@ public class UserController implements UserDocs {
     public ResponseEntity<Void> create(@RequestBody @Valid UserDTO userDTO, UriComponentsBuilder ucb){
         User user = userService.save(userMapper.toUser(userDTO));
         URI location = ucb
-                .path("/api/v1/users/{id}")
+                .path("/v1/users/{id}")
                 .buildAndExpand(user.getId())
                 .toUri();
         return ResponseEntity.created(location).build();
