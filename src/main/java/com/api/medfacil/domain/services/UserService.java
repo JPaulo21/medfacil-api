@@ -35,11 +35,13 @@ public class UserService implements UserDetailsService {
         );
     }
 
+    @Transactional(readOnly = true)
     public void numberAlreadyRegistered(String ddi, String ddd, String phoneNumber){
         if(userRepository.findByNumber(ddi, ddd, phoneNumber).isPresent())
             throw new FullNumberRegisteredException("Número já cadastrado!");
     }
 
+    @Transactional(readOnly = true)
     public void cpfRegistered(String cpf){
         if(userRepository.findByCpf(cpf).isPresent())
             throw new CpfRegisteredException("Já existe uma conta vinculada ao cpf informado");
@@ -68,6 +70,7 @@ public class UserService implements UserDetailsService {
         user.setPassword(null);
     }
 
+    @Transactional(readOnly = true)
     public User findByCpf(String cpf) {
         return userRepository.findByCpf(cpf).orElseThrow(
                 () -> new UsernameNotFoundException("Usuário não encontrado")
