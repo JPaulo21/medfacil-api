@@ -48,8 +48,11 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/api/v1/users").permitAll()
                         .requestMatchers(PUBLIC_DOCS_RESOURCES).permitAll()
                         .anyRequest().authenticated()
+                        //.anyRequest().permitAll()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .exceptionHandling(ex -> ex
+                        .authenticationEntryPoint(new AuthenticationEntryPoint()))
                 .build();
     }
 
