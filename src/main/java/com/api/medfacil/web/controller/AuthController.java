@@ -34,10 +34,12 @@ public class AuthController implements AuthDocs {
     private final TokenService tokenService;
 
     @PostMapping("/generate-code")
-    public ResponseEntity<CodeDTO> preLogin(@RequestBody CpfDTO cpfDTO){
+    public ResponseEntity<Void> preLogin(@RequestHeader("recipientToken") String recipientToken, @RequestBody CpfDTO cpfDTO){
         String code = authService.generateRandomCode();
+        log.info(code);
         userService.updatePassword(cpfDTO.cpf(), code);
-        return ResponseEntity.ok(new CodeDTO(code));
+        messagesService.sendPushNotification(recipientToken, new Message("Código de acesso", "Código de acesso: "+ code));
+        return ResponseEntity.ok().build();
     }
 
     @PostMapping("/login")
